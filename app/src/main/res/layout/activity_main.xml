@@ -7,13 +7,133 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="32dp"
+                tools:text="Pikachu"
+                android:textSize="40sp"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                android:contentDescription="@string/image_text" />
+
+            <TextView
+                android:id="@+id/tv_title_height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_title_weight"
+                app:layout_constraintTop_toBottomOf="@+id/iv_image"
+                android:layout_marginTop="24dp"
+                tools:text="Height"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_description_height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_description_weight"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_height"
+                android:layout_marginTop="16dp"
+                tools:text="Description Height"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_title_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_title_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_image"
+                android:layout_marginTop="24dp"
+                tools:text="Weight"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_description_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_description_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_weight"
+                android:layout_marginTop="16dp"
+                tools:text="Height"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_title_types"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_title_weight"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_height"
+                android:layout_marginTop="24dp"
+                tools:text="Type"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_title_abilities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_title_types"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_weight"
+                android:layout_marginTop="24dp"
+                tools:text="Abilities"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_description_types"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_description_abilities"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_types"
+                android:layout_marginTop="16dp"
+                tools:text="Description Types"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_description_abilities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tv_description_types"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_abilities"
+                android:layout_marginTop="16dp"
+                tools:text="Description Abilities"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
