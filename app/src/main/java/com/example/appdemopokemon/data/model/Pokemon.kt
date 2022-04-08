@@ -9,6 +9,10 @@ data class Pokemon(
     val weight: Int = 0
 )
 
-data class Ability(val name: String = "")
+data class Ability(var ability:AbilityData, val is_hidden: Boolean, var slot:Int )
+data class AbilityData(val name: String = "", val url: String)
+
 data class Sprite(val front_default: String = "")
-data class Type(val names: String = "")
+
+data class Type(var slot:Int, val type: TypeData)
+data class TypeData(val name: String = "", val url: String)

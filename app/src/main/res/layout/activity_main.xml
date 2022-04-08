@@ -24,13 +24,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="32dp"
                 tools:text="Pikachu"
+                android:textAllCaps="true"
                 android:textSize="40sp"
                 android:textAlignment="center"/>
 
             <ImageView
                 android:id="@+id/iv_image"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name"
@@ -44,7 +45,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/tv_title_weight"
                 app:layout_constraintTop_toBottomOf="@+id/iv_image"
                 android:layout_marginTop="24dp"
-                tools:text="Height"
+                android:text="Height"
                 android:textSize="24sp"
                 android:textAlignment="center"/>
 
@@ -68,7 +69,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_image"
                 android:layout_marginTop="24dp"
-                tools:text="Weight"
+                android:text="Weight"
                 android:textSize="24sp"
                 android:textAlignment="center"/>
 
@@ -92,7 +93,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/tv_title_weight"
                 app:layout_constraintTop_toBottomOf="@+id/tv_description_height"
                 android:layout_marginTop="24dp"
-                tools:text="Type"
+                android:text="Type"
                 android:textSize="24sp"
                 android:textAlignment="center"/>
 
@@ -104,7 +105,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_description_weight"
                 android:layout_marginTop="24dp"
-                tools:text="Abilities"
+                android:text="Abilities"
                 android:textSize="24sp"
                 android:textAlignment="center"/>
 
