@@ -32,31 +32,33 @@ class MainActivity : AppCompatActivity() {
             when (result) {
                 is Resource.Loading -> {
                     Toast.makeText(this, "cargando", Toast.LENGTH_SHORT).show()
-
                 }
                 is Resource.Failure -> {
                     Toast.makeText(this, result.error.localizedMessage, Toast.LENGTH_LONG).show()
                     Log.d("error", result.error.localizedMessage.toString())
                 }
                 is Resource.Success -> {
-                    Toast.makeText(this, result.data.name, Toast.LENGTH_SHORT).show()
                     binding.tvName.text = result.data.name.toString()
                     Picasso.get().load(result.data.sprites.front_default).into(binding.ivImage)
                     binding.tvDescriptionHeight.text = result.data.height.toString()
                     binding.tvDescriptionWeight.text = result.data.weight.toString()
-                    //binding.tvDescriptionAbilities.text = result.data.abilities.toString()
 
                     val listDataAbilities = mutableListOf<String>()
                     for(i in result.data.abilities){
                         listDataAbilities.add(i.ability.name)
                     }
-                    binding.tvDescriptionAbilities.text = listDataAbilities.toString()
+
+                    listDataAbilities.forEach { abilities->
+                        binding.tvDescriptionAbilities.text = "${binding.tvDescriptionAbilities.text} $abilities"
+                    }
 
                     val listDataTypes = mutableListOf<String>()
                     for(x in result.data.types){
                         listDataTypes.add(x.type.name)
                     }
-                    binding.tvDescriptionTypes.text = listDataTypes.toString()
+                    listDataTypes.forEach { type->
+                        binding.tvDescriptionTypes.text = "${binding.tvDescriptionTypes.text} $type"
+                    }
 
 
                 }
